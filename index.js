@@ -91,7 +91,7 @@ function draw(){
   }
   for (i = 0; i<snake.length-1; i++){
     if (snake[snake.length-1][0] == snake[i][0] && snake[snake.length-1][1] == snake[i][1]){
-      
+      noLoop();
     }
   }
   
@@ -99,10 +99,6 @@ function draw(){
   if (snake[snake.length-1][0] == -1 || snake[snake.length-1][1] == -1 || snake[snake.length-1][0] == nb_hor ||snake[snake.length-1][1] == nb_ver) {
     noLoop();
   }
-  
-  
-  
- 
 }
 function keyPressed() {
   if (keyCode === LEFT_ARROW) {
@@ -124,4 +120,3 @@ function keyPressed() {
     }
   }
 }
-
