@@ -28,8 +28,6 @@ function setup(){
 }
 
 function draw(){
-  
-  
   if (!apple){
     pos_x = Math.floor(Math.random()*nb_hor);
     pos_y = Math.floor(Math.random()*nb_ver);
@@ -44,7 +42,6 @@ function draw(){
     pop();
     apple = true;
   }
-
     //where is snake
   for (i=0; i<snake.length; i++){
     push();
@@ -100,9 +97,6 @@ function draw(){
     noLoop();
   }
   
-  
-  
- 
 }
 function keyPressed() {
   if (keyCode === LEFT_ARROW) {
@@ -124,4 +118,3 @@ function keyPressed() {
     }
   }
 }
-
