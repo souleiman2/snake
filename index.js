@@ -82,7 +82,7 @@ function draw(){
     apple = false;
   }
   for (i = 0; i<snake.length-1; i++){
-    if (snake[snake.length-1][0] == snake[snake.length-1][0] && snake[snake.length-1][1] == snake[snake.length-1][1]){
+    if (snake[snake.length-1][0] == snake[i][0] && snake[snake.length-1][1] == snake[i][1]){
       noLoop();
     }
   }
