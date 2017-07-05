@@ -8,8 +8,8 @@ var apple = false;
 var pos_apple;
 
 function setup(){
-  hor = window.innerWidth - taille_rect;
-  ver = window.innerHeight - taille_rect;
+  hor = window.innerWidth;
+  ver = window.innerHeight;
   createCanvas(hor, ver);
   background(0);
   
