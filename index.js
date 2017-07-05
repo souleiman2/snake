@@ -94,9 +94,15 @@ function draw(){
       noLoop();
     }
   }
+  
+  
   if (snake[snake.length-1][0] == -1 || snake[snake.length-1][1] == -1 || snake[snake.length-1][0] == nb_hor ||snake[snake.length-1][1] == nb_ver) {
     noLoop();
   }
+  
+  
+  
+ 
 }
 function keyPressed() {
   if (keyCode === LEFT_ARROW) {
@@ -118,3 +124,4 @@ function keyPressed() {
     }
   }
 }
+
