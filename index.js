@@ -2,7 +2,7 @@ var snake = [];
 var direction = Math.floor(Math.random()*4 +1);
 var nb_hor;
 var nb_ver;
-var taille_rect = 14;
+var taille_rect = 24;
 var space = taille_rect/4;
 var apple = false;
 var pos_apple;
@@ -19,7 +19,7 @@ function setup(){
   for (i = 0; i<nb_hor; i++){
     for (j = 0; j<nb_hor; j++){
       push();
-      rect(i*(taille_rect+space) + space - taille_rect, j*(taille_rect+space) + space- taille_rect,taille_rect,taille_rect);
+      rect(i*(taille_rect+space) + space , j*(taille_rect+space) + space,taille_rect,taille_rect);
       pop();
     }
   }
@@ -28,6 +28,8 @@ function setup(){
 }
 
 function draw(){
+  
+  
   if (!apple){
     pos_x = Math.floor(Math.random()*nb_hor);
     pos_y = Math.floor(Math.random()*nb_ver);
@@ -42,6 +44,7 @@ function draw(){
     pop();
     apple = true;
   }
+
     //where is snake
   for (i=0; i<snake.length; i++){
     push();
@@ -97,6 +100,9 @@ function draw(){
     noLoop();
   }
   
+  
+  
+ 
 }
 function keyPressed() {
   if (keyCode === LEFT_ARROW) {
@@ -118,3 +124,4 @@ function keyPressed() {
     }
   }
 }
+
