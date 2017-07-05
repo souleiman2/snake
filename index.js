@@ -12,8 +12,10 @@ function setup(){
   ver = 700;
   createCanvas(hor, ver);
   background(0);
+  
   nb_hor = Math.floor((hor -space)/(taille_rect+space));
   nb_ver= Math.floor((ver-space)/(taille_rect+space));
+  
   for (i = 0; i<nb_hor; i++){
     for (j = 0; j<nb_hor; j++){
       push();
@@ -21,9 +23,13 @@ function setup(){
       pop();
     }
   }
+  
   snake.push([0,0],[-1, -1], [-1,-1], [Math.floor(nb_hor/2), Math.floor(nb_ver/2)] );
 }
+
 function draw(){
+  
+  
   if (!apple){
     pos_x = Math.floor(Math.random()*nb_hor);
     pos_y = Math.floor(Math.random()*nb_ver);
@@ -38,6 +44,7 @@ function draw(){
     pop();
     apple = true;
   }
+
     //where is snake
   for (i=0; i<snake.length; i++){
     push();
@@ -47,7 +54,8 @@ function draw(){
   }
   
   frameRate(15);
-
+  
+  //where is he going
    if (direction == 1){//up
     snake.push([snake[snake.length -1][0], snake[snake.length -1][1] -1]);
     push();
@@ -83,12 +91,17 @@ function draw(){
   }
   for (i = 0; i<snake.length-1; i++){
     if (snake[snake.length-1][0] == snake[i][0] && snake[snake.length-1][1] == snake[i][1]){
-      noLoop();
+      
     }
   }
+  
+  
   if (snake[snake.length-1][0] == -1 || snake[snake.length-1][1] == -1 || snake[snake.length-1][0] == nb_hor ||snake[snake.length-1][1] == nb_ver) {
     noLoop();
   }
+  
+  
+  
  
 }
 function keyPressed() {
@@ -111,3 +124,4 @@ function keyPressed() {
     }
   }
 }
+
