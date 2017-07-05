@@ -19,7 +19,7 @@ function setup(){
   for (i = 0; i<nb_hor; i++){
     for (j = 0; j<nb_hor; j++){
       push();
-      rect(i*(taille_rect+space) + space , j*(taille_rect+space) + space,taille_rect,taille_rect);
+      rect(i*(taille_rect+space) + space - taille_rect, j*(taille_rect+space) + space- taille_rect,taille_rect,taille_rect);
       pop();
     }
   }
