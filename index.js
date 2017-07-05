@@ -2,14 +2,14 @@ var snake = [];
 var direction = Math.floor(Math.random()*4 +1);
 var nb_hor;
 var nb_ver;
-var taille_rect = 30;
+var taille_rect = 20;
 var space = taille_rect/4;
 var apple = false;
 var pos_apple;
 
 function setup(){
-  hor = window.innerWidth;
-  ver = window.innerHeight;
+  hor = window.innerWidth - taille_rect;
+  ver = window.innerHeight - taille_rect;
   createCanvas(hor, ver);
   background(0);
   
