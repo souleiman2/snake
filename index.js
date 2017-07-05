@@ -2,7 +2,7 @@ var snake = [];
 var direction = Math.floor(Math.random()*4 +1);
 var nb_hor;
 var nb_ver;
-var taille_rect = 10;
+var taille_rect = 4;
 var space = taille_rect/4;
 var apple = false;
 var pos_apple;
