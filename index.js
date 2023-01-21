@@ -8,13 +8,17 @@ var apple = false;
 var pos_apple;
 
 function setup(){
-  hor = window.innerWidth;
-  ver = window.innerHeight;
-  createCanvas(hor, ver);
+  hor = window.innerWidth - space;
+  ver = window.innerHeight - space;
+
+  nb_hor = Math.floor(hor/(taille_rect+space));
+  nb_ver= Math.floor(ver/(taille_rect+space));
+
+
+  createCanvas(nb_hor*(taille_rect+space) + space, nb_ver*(taille_rect+space) + space);
   background(0);
   
-  nb_hor = Math.floor((hor -space)/(taille_rect+space));
-  nb_ver= Math.floor((ver-space)/(taille_rect+space));
+  
   
   for (i = 0; i<nb_hor; i++){
     for (j = 0; j<nb_hor; j++){
